@@ -2,11 +2,11 @@ const winston = require("winston");
 const LOGLEVEL = "debug";
 
 const LOG_FORMAT = winston.format.combine(
-  //   winston.format.align(),
+  // winston.format.align(),
   winston.format.timestamp({ format: "DD-MM-YYYY T hh:mm:ss.sss A" }),
 
   winston.format.printf(({ level, message }) => {
-    return `${level.toUpperCase()} | ${message}`;
+    return `${level.toUpperCase().padEnd(5)} | ${message}`;
   })
 );
 
