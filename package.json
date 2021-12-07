@@ -4,7 +4,11 @@
   "description": "testdrinven node.js approach",
   "main": "index.js",
   "scripts": {
-    "test": "test.js"
+    "setup": "sh setup/create_project.sh",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["setup"]
   },
   "repository": {
     "type": "git",
@@ -20,9 +24,12 @@
   "bugs": {
     "url": "https://github.com/uniquecorn09/AdventOfCode2019/issues"
   },
-  "type": "module",
   "homepage": "https://github.com/uniquecorn09/AdventOfCode2019#readme",
   "devDependencies": {
     "jest": "^27.4.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
   }
 }

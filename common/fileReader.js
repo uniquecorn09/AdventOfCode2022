@@ -1,16 +1,15 @@
-import fs from 'fs'
-
+const fs = require("fs");
 
 const readData = (filepath) => {
   let dataCollection = [];
   try {
-      const data = fs.readFileSync(filepath, 'utf8')
-      dataCollection =  data.split("\n")
-      return dataCollection
-    } catch (err) {
-      console.error(err)
-      return null
-    }
-}
+    const data = fs.readFileSync(filepath, "utf8");
+    dataCollection = data.split("\n").map(Number);
+    return dataCollection;
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+};
 
-export default readData
+module.exports = readData;
