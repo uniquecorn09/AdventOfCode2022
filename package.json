@@ -1,0 +1,24 @@
+{
+  "name": "adventofcode2019",
+  "version": "0.0.1",
+  "description": "testdrinven node.js approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniquecorn09/AdventOfCode2019.git"
+  },
+  "keywords": [
+    "aoc",
+    "adventOfCode",
+    "2019"
+  ],
+  "author": "uniquecorn09",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniquecorn09/AdventOfCode2019/issues"
+  },
+  "homepage": "https://github.com/uniquecorn09/AdventOfCode2019#readme"
+}
