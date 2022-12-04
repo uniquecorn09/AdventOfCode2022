@@ -1,5 +1,7 @@
 #!/bin/bash
 DAYS_OF_CODING=$1
+
+echo $1
 for (( i = 1; i <= $DAYS_OF_CODING; i++ )) 
 do 
     folder="day$i"
@@ -12,10 +14,11 @@ do
         cp ../setup/_aoc.js aoc.js
         cp ../setup/_aoc.test.js aoc.test.js
         cp ../setup/solutions.txt solutions.txt
-        sed -i 's/DAY = 1/DAY = '$i'/' aoc.js
+        sed -i'.bak' -e 's/DAY = 1/DAY = '$i'/g' aoc.js
         # curl https://adventofcode.com/2022/day/$i > raw$i.html
         touch data.txt
         touch testdata.txt
+        rm aoc.js.bak
         cd ..
     fi
 done
