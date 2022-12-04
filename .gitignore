@@ -105,3 +105,4 @@ dist
 
 # AoC helpers
 setup/.env
+day*/solutions.txt
