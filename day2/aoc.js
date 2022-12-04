@@ -132,7 +132,6 @@ const part2 = (input) => {
     logger.debug(`You chose ${player2}`)
 
     const result = playRPS(choseSign(player1), player2)
-    console.log(result)
     let baseScore = 0
 
     if (result.winner === 2 || result.winner === 0) {

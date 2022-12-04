@@ -1,14 +1,14 @@
-const winston = require("winston");
-const LOGLEVEL = "debug";
+const winston = require('winston')
+const LOGLEVEL = 'info'
 
 const LOG_FORMAT = winston.format.combine(
   // winston.format.align(),
-  winston.format.timestamp({ format: "DD-MM-YYYY T hh:mm:ss.sss A" }),
+  winston.format.timestamp({ format: 'DD-MM-YYYY T hh:mm:ss.sss A' }),
 
   winston.format.printf(({ level, message }) => {
-    return `${level.toUpperCase().padEnd(5)} | ${message}`;
+    return `${level.toUpperCase().padEnd(5)} | ${message}`
   })
-);
+)
 
 module.exports = winston.createLogger({
   format: LOG_FORMAT,
@@ -19,4 +19,4 @@ module.exports = winston.createLogger({
     //   filename: "./logs/app.log",
     // }),
   ],
-});
+})
