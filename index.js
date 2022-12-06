@@ -1,8 +1,8 @@
-const fileReader = require("./common/fileReader.js");
-const startPuzzle = require("./day1/aoc.js");
-const CURRENTDAY = 2
+const { readData, readNumbers, readMap } = require('./common/fileReader')
+const startPuzzle = require('./day5/aoc.js')
+const CURRENTDAY = 5
 
-const input = fileReader(__dirname + `/day${CURRENTDAY}/data.txt`);
+const input = readMap(__dirname + `/day${CURRENTDAY}/testdata.txt`)
 
-startPuzzle(1, input);
-startPuzzle(2, input);
+// startPuzzle(1, input)
+startPuzzle(2, input)
