@@ -13,6 +13,17 @@ const readNumbers = (filepath) => {
   }
 }
 
+const readString = (filepath) => {
+  let dataCollection = []
+  try {
+    const data = fs.readFileSync(filepath, 'utf8')
+    dataCollection = data.split('\n').map(String)
+    return dataCollection
+  } catch (err) {
+    console.error(err)
+    return null
+  }
+}
 const readData = (filepath) => {
   let dataCollection = []
   try {
@@ -75,4 +86,5 @@ module.exports = {
   readNumbers: readNumbers,
   readData: readData,
   readMap: readMap,
+  readString: readString,
 }
